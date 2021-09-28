@@ -1,0 +1,14 @@
+{
+  "room001": {
+    "c001": true,
+    "c002": true,
+    "c005": true
+  },
+  "room002": {
+    "c003": true,
+    "c004": true
+  },
+  "room003": {
+    "c006": true
+  }
+}

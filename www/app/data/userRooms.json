@@ -1,0 +1,44 @@
+{
+  "c001": {
+    "room001": {
+      "lastMessage": "ROOM001 - 오신것을 환영합니다",
+      "roomId": "room001",
+      "roomName": "ROOM 001"
+    }
+  },
+  "c002": {
+    "room001": {
+      "lastMessage": "ROOM001 - 오신것을 환영합니다",
+      "roomId": "room001",
+      "roomName": "ROOM 001"
+    }
+  },
+  "c003": {
+    "room002": {
+      "lastMessage": "ROOM002 - 오신것을 환영합니다",
+      "roomId": "room002",
+      "roomName": "ROOM 002"
+    }
+  },
+  "c004": {
+    "room002": {
+      "lastMessage": "ROOM002 - 오신것을 환영합니다",
+      "roomId": "room002",
+      "roomName": "ROOM 002"
+    }
+  },
+  "c005": {
+    "room001": {
+      "lastMessage": "ROOM001 - 오신것을 환영합니다",
+      "roomId": "room001",
+      "roomName": "ROOM 001"
+    }
+  },
+  "c006": {
+    "room003": {
+      "lastMessage": "ROOM003 - 오신것을 환영합니다",
+      "roomId": "room003",
+      "roomName": "ROOM 003"
+    }
+  }
+}

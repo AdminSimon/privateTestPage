@@ -1,0 +1,14 @@
+{
+    "room001": {        
+        "lastMessage": "ROOM001 - 오신것을 환영합니다",
+        "roomName": "ROOM 001"
+    },
+    "room002": {
+        "lastMessage": "ROOM002 - 오신것을 환영합니다",
+        "roomName": "ROOM 002"
+    },
+    "room003": {
+        "lastMessage": "ROOM003 - 오신것을 환영합니다",
+        "roomName": "ROOM 003"
+    }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';
+            connect-src https://*.channel.io wss://*.channel.io https://s3.ap-northeast-2.amazonaws.com;
+            script-src https://*.channel.io https://cdn.ravenjs.com;
+            style-src 'self' 'unsafe-inline' https://*.channel.io;
+            media-src *;
+            img-src 'self' data: content: https://*.channel.io;;
+        "> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>아이니챗</title>
+
+    <link rel="stylesheet" href="app/scene/home/home.css">
+    <link rel="stylesheet" href="app/scene/chat/chat.css">
+    <link rel="stylesheet" href="app/scene/chatlist/chatlist.css">
+
+    <script type="text/javascript" src="app/lib/socket.io.min.js?rel=v1113"></script>
+    <script type="text/javascript" src="app/lib/jquery.min.js?rel=v1113"></script>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!--
+            ---------------- 
+                home
+            ----------------
+        -->
+        <div id="home" class="scene">
+            <div class="content">
+                <h1>로그인</h1>
+                <h3>고객</h3>
+                <ul class="customers"></ul>
+                <div class="new-user">
+                    <div class="input-wrapper">
+                        <input placeholder="이름" type="text" class="name">
+                        <input placeholder="색상" type="text" class="personal-color">
+                    </div>
+                    <div class="make">
+                        만들기
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="i-room" data-room-id="123">
+            <div class="name"></div>
+            <div class="last-message"></div>
+            <div class="users"></div>
+        </div>
+
+        <!--
+            ---------------- 
+                chatlist
+            ----------------
+        -->
+        <div id="chatlist" class="scene">
+            <div class="content">
+
+                <div class="history-back">로그아웃</div>
+
+                <!-- 내정보 -->
+                <div class="user-avatar">
+                    <div class="user-name"></div>
+                </div>
+
+                <h1>채팅 목록</h1>
+                <h3>내 채팅</h3>
+                <ul class="my-rooms"></ul>
+
+                <h3>전체 채팅</h3>
+                <ul class="rooms"></ul>
+            </div>
+        </div>
+
+        <!--
+            ---------------- 
+                chat
+            ----------------
+        -->
+        <div id="chat" class="scene">
+            <div class="content">
+
+                <div class="history-back">뒤로</div>
+
+                <!-- 내정보 -->
+                <div class="user-avatar">
+                    <div class="user-name"></div>
+                </div>
+
+                <!-- 헤드 -->
+                <h1>채팅<div class="count"></div></h1>
+
+                <!-- 이름 -->
+                <div class="chat-info">
+                    <div class="name"></div>
+                    <div class="chat-out">방 나가기</div>
+                </div>
+                <div class="chat-list">
+
+
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="메세지를 입력해주세요">
+                    <div class="send">전송</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="cordova.js"></script>
+
+    <!-- External Library -->
+    <script type="text/javascript" src="app/lib/routie.min.js?rel=v1113"></script>
+
+    <!-- config -->
+    <script type="text/javascript" src="app/config.js?rel=v102"></script>
+    <script type="text/javascript" src="app/define.js?rel=v102"></script>
+    <script type="text/javascript" src="app/scene.js?rel=v102"></script>
+
+    <!-- service -->
+    <script type="text/javascript" src="app/service/service.fdb.js?rel=v102"></script>
+    <script type="text/javascript" src="app/service/service.filter.js?rel=v102"></script>
+    <script type="text/javascript" src="app/service/service.user.js?rel=v102"></script>
+    <!-- <script type="text/javascript" src="app/service/service.channeltalk.js?rel=v102"></script> -->
+
+    <!-- scene -->
+    <script type="text/javascript" src="app/scene/home/home.js?rel=v102"></script>
+    <script type="text/javascript" src="app/scene/chat/chat.js?rel=v102"></script>
+    <script type="text/javascript" src="app/scene/chatlist/chatlist.js?rel=v102"></script>
+
+    <!-- loader -->
+    <script type="text/javascript" src="app/loader.js?rel=v102"></script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+</body>
+
+</html>

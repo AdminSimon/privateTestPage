@@ -1,0 +1,26 @@
+{
+  "c001": {
+    "name": "이우주",
+    "personalColor": "red"
+  },
+  "c002": {
+    "name": "황승진",
+    "personalColor": "blue"
+  },
+  "c003": {
+    "name": "김샛별",
+    "personalColor": "black"
+  },
+  "c004": {
+    "name": "이선주",
+    "personalColor": "yellow"
+  },
+  "c005": {
+    "name": "김보라",
+    "personalColor": "green"
+  },
+  "c006": {
+    "name": "박연주",
+    "personalColor": "purple"
+  }
+}

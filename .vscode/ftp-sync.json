@@ -1,0 +1,34 @@
+{
+    "remotePath": "./test/test-channeltalk-app",
+    "host": "purple.jungli.net",
+    "username": "zcsqe",
+    "password": "xoruddl13!A",
+    "port": 7022,
+    "secure": false,
+    "protocol": "sftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store",
+        "\\hooks",
+        "\\node_modules",
+        "\\platforms",
+        "\\plugins",
+        "\\res",
+        "\\config.xml",
+        "\\info.txt",
+        "\\make.apk.sh",
+        "\\package-lock.json",
+        "\\package.json"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": false,
+        "extensionsToInclude": [],
+        "path": ""
+    }
+}
